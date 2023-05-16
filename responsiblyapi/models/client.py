@@ -11,3 +11,10 @@
     #   "address": "56849 Fadel Gateway",
     #   "phoneNumber": "202-244-7090",
 #   "userId": 1
+from django.db import models
+from django.contrib.auth.models import User
+
+class Client(models.Model):
+
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.CharField(max_length=69)

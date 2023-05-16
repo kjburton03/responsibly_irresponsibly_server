@@ -14,8 +14,19 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from django.conf import settings
+from rest_framework import routers
+from django.conf.urls.static import static
+from responsiblyapi.views import ShopView, TodoView, register_user, login_user
+
+router = routers.DefaultRouter(trailing_slash=False)
+router.register(r'shops', ShopView, 'shop')
+router.register(r'todos', TodoView, 'todo')
 
 urlpatterns = [
+    path('register', register_user),
+    path('login', login_user),
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
