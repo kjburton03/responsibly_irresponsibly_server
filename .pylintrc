@@ -6,4 +6,3 @@ disable=broad-except,imported-auth-user,missing-class-docstring,no-self-use,abst
 
 [MASTER]
 disable=C0114,
-

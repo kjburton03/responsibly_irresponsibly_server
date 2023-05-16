@@ -1,0 +1,22 @@
+[
+    {
+        "model": "responsiblyapi.todo",
+        "pk": 1,
+        "fields":{
+            "title": "Walk Kobe",
+            "price": 1,
+            "daily": true,
+            "user": 1
+        }
+    },
+    {
+        "model": "responsiblyapi.todo",
+        "pk": 2,
+        "fields":{
+            "title": "Take out trash",
+            "price": 2,
+            "daily": false,
+            "user": 1
+        }        
+    }
+]

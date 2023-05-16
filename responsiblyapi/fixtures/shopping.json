@@ -1,0 +1,24 @@
+[
+    {
+        "model": "responsiblyapi.shop",
+        "pk": 1,
+        "fields":{
+            "title": "coding robot",
+            "price": 69,
+            "link": "www.amazon.com",
+            "asap": false,
+            "user": 1
+        }
+    },
+    {
+        "model": "responsiblyapi.shop",
+        "pk": 2,
+        "fields":{
+            "title": "kobe's",
+            "price": 420,
+            "link": "www.ebay.com",
+            "asap": true,
+            "user": 1
+        }        
+    }
+]
