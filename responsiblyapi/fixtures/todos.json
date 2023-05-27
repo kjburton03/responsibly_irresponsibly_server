@@ -6,17 +6,17 @@
             "title": "Walk Kobe",
             "price": 1,
             "daily": true,
-            "user": 1
+            "client": 1
         }
     },
     {
         "model": "responsiblyapi.todo",
         "pk": 2,
-        "fields":{
+        "fields": {
             "title": "Take out trash",
             "price": 2,
             "daily": false,
-            "user": 1
+            "client": 1
         }        
     }
 ]
