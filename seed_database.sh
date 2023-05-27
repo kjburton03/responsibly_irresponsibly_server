@@ -5,7 +5,10 @@ python3 manage.py makemigrations responsiblyapi
 python3 manage.py migrate responsiblyapi
 python3 manage.py loaddata users
 python3 manage.py loaddata tokens
+python3 manage.py loaddata clients
 python3 manage.py loaddata shops
+python3 manage.py loaddata todos
+
 # python3 manage.py loaddata attractionTypes
 # python3 manage.py loaddata attractions
 # python3 manage.py loaddata restaurants

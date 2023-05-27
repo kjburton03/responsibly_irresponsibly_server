@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from rest_framework import routers
 from django.conf.urls.static import static
-from responsiblyapi.views import ShopView, TodoView, register_user, login_user
+from responsiblyapi.views import ShopView, register_user, login_user, TodoView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'shops', ShopView, 'shop')
