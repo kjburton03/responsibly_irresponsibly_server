@@ -6,7 +6,7 @@
             "title": "Walk Kobe",
             "price": 1,
             "daily": true,
-            "client": 1
+            "client":[1]
         }
     },
     {
@@ -16,7 +16,7 @@
             "title": "Take out trash",
             "price": 2,
             "daily": false,
-            "client": 1
+            "client": [1]
         }        
     }
 ]

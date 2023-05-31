@@ -6,7 +6,8 @@
             "title": "coding robot",
             "price": 69,
             "link": "www.amazon.com",
-            "asap": false
+            "asap": false,
+            "client": [1]
         }
     },
     {
@@ -16,7 +17,8 @@
             "title": "kobe's",
             "price": 420,
             "link": "www.ebay.com",
-            "asap": true
+            "asap": true,
+            "client": [1]
         }        
     }
 ]

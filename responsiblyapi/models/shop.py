@@ -8,5 +8,6 @@ class Shop(models.Model):
     price = models.DecimalField(max_digits=10, decimal_places=2)
     link = models.URLField()
     asap = models.BooleanField()
-    # client = models.ForeignKey("Client", on_delete=models.CASCADE)
-    # client = models.ManyToOneField(Client, on_delete=models.CASCADE)
+    # client = models.ForeignKey("Client", on_delete=models.CASCADE, related_name='client')
+    # client = models.ManyToManyField("Client", on_delete=models.CASCADE, related_name='clients')
+    client = models.ManyToManyField("Client", related_name='shops')
