@@ -4,5 +4,9 @@
         "--load-plugins=pylint_django",
         "--django-settings-module=responsibly.settings",
     ],
-    "python.linting.enabled": true
+    "python.linting.enabled": true,
+    "cSpell.words": [
+        "responsiblyapi",
+        "viewsets"
+    ]
 }
