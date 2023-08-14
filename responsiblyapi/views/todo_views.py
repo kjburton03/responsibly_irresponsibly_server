@@ -41,16 +41,30 @@ class TodoView(ViewSet):
 
         serializer = TodoSerializer(todo)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def update(self, request, pk):
+
+        todo = Todo.objects.get(pk=pk)
+        todo.title = request.data["title"]
+        todo.price = request.data["price"]
+        todo.daily = request.data["daily"]
+
+
+        todo.save()
+
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
+
+
     def destroy(self, request, pk):
         """Handle DELETE requests for a game
         Returns:
             Response -- Empty body with 204 status code
         """
-        
+
         todo = Todo.objects.get(pk=pk)
         todo.delete()
         return Response(None, status=status.HTTP_204_NO_CONTENT)
-   
+
 
 
 
@@ -62,3 +76,4 @@ class TodoSerializer(serializers.ModelSerializer):
         model = Todo
         fields = ('id', 'title', 'price', 'daily', 'client' )
         depth = 1
+        
