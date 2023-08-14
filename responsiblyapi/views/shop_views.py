@@ -42,7 +42,7 @@ class ShopView(ViewSet):
 
         serializer = ShopSerializer(shop)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
-    
+
     def update(self, request, pk):
 
         shop = Shop.objects.get(pk=pk)
