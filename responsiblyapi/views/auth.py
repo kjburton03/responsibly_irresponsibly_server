@@ -28,7 +28,6 @@ def login_user(request):
         data = {
             'valid': True,
             'token': token.key,
-            # 'user': token.user.id
         }
         return Response(data)
     else:
@@ -51,8 +50,7 @@ def register_user(request):
         username=request.data['username'],
         password=request.data['password'],
         first_name=request.data['first_name'],
-        last_name=request.data['last_name'],
-        email=request.data['email']
+        last_name=request.data['last_name']
     )
 
     # # Now save the extra info in the levelupapi_gamer table
